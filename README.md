@@ -25,6 +25,8 @@ The **Routing Key** is mainly what the Exchange looks for when deciding how to r
 A **Connection** is made between your service and the AMQP broker. One Connection can have multiple channels.\
 A **Channel** is a virtual connection inside that connection. All messages within the system are always sent through a channel.\
 
-### Dead Letter Exchange
+## Dead Letter Exchange
+
+Each queue can configure a Dead Letter exchange. If Queue is configured with Dead Letter exchange, then rejected or expired message will be moved into the Dead Letter Exchange otherwise it will be get removed from the Queue.
 
 ![image](https://user-images.githubusercontent.com/82801063/175532436-3a873b97-bdff-40a8-ab71-c076e6743cc5.png)
